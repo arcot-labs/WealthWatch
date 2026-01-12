@@ -60,14 +60,14 @@
         "@types/pg": "^8.16.0",
         "@types/swagger-jsdoc": "^6.0.4",
         "@types/swagger-ui-express": "^4.1.8",
-        "@vitest/coverage-v8": "^4.0.16",
-        "@vitest/ui": "^4.0.16",
+        "@vitest/coverage-v8": "^4.0.17",
+        "@vitest/ui": "^4.0.17",
         "eslint": "^9.39.2",
         "eslint-config-prettier": "^10.1.8",
         "globals": "^17.0.0",
         "typescript": "^5.9.3",
-        "typescript-eslint": "^8.52.0",
+        "typescript-eslint": "^8.53.0",
         "vite-tsconfig-paths": "^6.0.4",
-        "vitest": "^4.0.16"
+        "vitest": "^4.0.17"
     }
 }
