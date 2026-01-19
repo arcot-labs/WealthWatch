@@ -61,6 +61,10 @@ jobs:
                   check-latest: true
                   registry-url: 'https://npm.pkg.github.com'
 
+            - name: update npm
+              if: matrix.language == 'typescript'
+              run: npm i -g npm@latest
+
             - name: initialize codeql for actions
               if: matrix.language == 'actions'
               uses: github/codeql-action/init@v4

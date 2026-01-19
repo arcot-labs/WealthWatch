@@ -45,6 +45,9 @@ jobs:
                   check-latest: true
                   registry-url: 'https://npm.pkg.github.com'
 
+            - name: update npm
+              run: npm i -g npm@latest
+
             - name: modify build.ts
               working-directory: client/src
               run: |

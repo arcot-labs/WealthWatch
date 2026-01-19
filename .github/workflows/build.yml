@@ -27,6 +27,9 @@ jobs:
                   check-latest: true
                   registry-url: 'https://npm.pkg.github.com'
 
+            - name: update npm
+              run: npm i -g npm@latest
+
             - name: install, build - non-prod
               if: (github.base_ref || github.ref_name) != 'main'
               working-directory: client
@@ -67,6 +70,9 @@ jobs:
                   check-latest: true
                   registry-url: 'https://npm.pkg.github.com'
 
+            - name: update npm
+              run: npm i -g npm@latest
+
             - name: install, build
               working-directory: server
               env:
@@ -94,6 +100,9 @@ jobs:
               with:
                   node-version: 'lts/*'
                   check-latest: true
+
+            - name: update npm
+              run: npm i -g npm@latest
 
             - name: install, build
               working-directory: shared

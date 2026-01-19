@@ -31,6 +31,9 @@ jobs:
                   check-latest: true
                   registry-url: 'https://npm.pkg.github.com'
 
+            - name: update npm
+              run: npm i -g npm@latest
+
             - name: fetch, rebase
               run: |
                   git fetch
