@@ -9,7 +9,9 @@ fi
 
 if [ -f "$ENV_FILE" ]; then
     echo "loading .env..."
-    export $(grep -v '^#' "$ENV_FILE" | xargs)
+    set -a
+    source "$ENV_FILE"
+    set +a
 fi
 
 if [ -z "$DB_USER" ] || [ -z "$DB_PASSWORD" ] || [ -z "$DB_NAME" ]; then

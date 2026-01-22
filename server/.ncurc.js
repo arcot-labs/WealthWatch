@@ -1,4 +1,4 @@
-export function target(name) {
-    if (name === 'ioredis') return 'patch'
-    return 'latest'
+export function filterResults(name) {
+    if (name === 'ioredis') return false
+    return true
 }
