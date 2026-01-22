@@ -51,6 +51,7 @@ jobs:
                   registry-url: 'https://npm.pkg.github.com'
 
             - name: update npm
+              if: steps.check-author.outputs.skip_publish == 'false'
               run: npm i -g npm@latest
 
             - name: check if version already published
