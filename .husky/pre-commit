@@ -23,19 +23,19 @@ echo
 
 echo "Checking for available updates..."
 echo "Checking base project..."
-ncu -e 2
+ncu
 echo
 
 echo "Checking shared project..."
-ncu --cwd shared --configFilePath shared/.ncurc.json -e 2
+ncu --cwd shared --configFilePath shared/.ncurc.json
 echo
 
 echo "Checking client project..."
-ncu --cwd client --configFilePath client/.ncurc.json -e 2
+ncu --cwd client --configFilePath client/.ncurc.json
 echo
 
 echo "Checking server project..."
-ncu --cwd server --configFilePath server/.ncurc.json -e 2
+ncu --cwd server --configFilePath server/.ncurc.json
 echo
 
 echo "Done running pre-commit hook"
