@@ -31,7 +31,7 @@
     "dependencies": {
         "@tsconfig/node-lts": "^24.0.0",
         "@tsconfig/strictest": "^2.0.8",
-        "plaid": "^41.0.0",
+        "plaid": "^41.1.0",
         "zod": "^4.3.6"
     },
     "devDependencies": {
@@ -40,10 +40,10 @@
         "@vitest/ui": "^4.0.17",
         "eslint": "^9.39.2",
         "eslint-config-prettier": "^10.1.8",
-        "globals": "^17.1.0",
+        "globals": "^17.3.0",
         "ts-patch": "^3.3.0",
         "typescript": "^5.9.3",
-        "typescript-eslint": "^8.53.1",
+        "typescript-eslint": "^8.54.0",
         "vitest": "^4.0.17"
     },
     "publishConfig": {
