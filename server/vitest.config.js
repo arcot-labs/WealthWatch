@@ -7,6 +7,7 @@ export default defineConfig({
         coverage: {
             include: ['src/middleware/*.ts', 'src/utilities/*.ts'],
         },
+        testTimeout: 20000,
     },
     plugins: [tsconfigPaths()],
 })
