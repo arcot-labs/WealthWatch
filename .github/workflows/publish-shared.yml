@@ -66,8 +66,8 @@ jobs:
                   VERSION=$(jq -r .version package.json)
                   echo "Local version: $VERSION"
 
-                  PACKAGE_NAME="@aditya-arcot/wealthwatch-shared"
-                  if PUBLISHED=$(npm view "$PACKAGE_NAME" version); then
+                  PACKAGE_NAME="@arcot-labs/wealthwatch-shared"
+                  if PUBLISHED=$(npm view "$PACKAGE_NAME" version 2>&1); then
                     echo "Published version: $PUBLISHED"
                     if npx -y semver-compare-cli "$VERSION" gt "$PUBLISHED"; then
                       echo "Local version is greater. Will publish"

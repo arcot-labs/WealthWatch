@@ -2,7 +2,7 @@
 
 set -eo pipefail
 
-PACKAGE_NAME="@aditya-arcot/wealthwatch-shared"
+PACKAGE_NAME="@arcot-labs/wealthwatch-shared"
 
 echo "Checking for changes in shared project files..."
 CHANGED_FILES=$(git diff --cached --name-only)

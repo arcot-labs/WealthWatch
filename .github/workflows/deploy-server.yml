@@ -71,7 +71,7 @@ jobs:
               working-directory: server
               run: |
                   echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" >> .npmrc
-                  echo "@aditya-arcot:registry=https://npm.pkg.github.com/" >> .npmrc
+                  echo "@arcot-labs:registry=https://npm.pkg.github.com/" >> .npmrc
 
             - name: copy files
               working-directory: server
