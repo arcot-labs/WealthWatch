@@ -21,9 +21,6 @@ jobs:
         runs-on: ${{ inputs.runner }}
         environment: ${{ github.ref_name == 'main' && 'prod' || github.ref_name }}
         steps:
-            - name: unlock keychain
-              run: security unlock-keychain -p ${{ secrets.KEYCHAIN_PASSWORD }} login.keychain
-
             - name: checkout
               uses: actions/checkout@v6
 
