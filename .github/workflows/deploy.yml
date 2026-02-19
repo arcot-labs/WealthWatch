@@ -42,9 +42,9 @@ jobs:
               id: runner
               run: |
                   if [ "${{ github.ref_name }}" = "test" ]; then
-                      echo "runner=mbp-14" >> $GITHUB_OUTPUT
+                      echo "runner=mbp-14-macos" >> $GITHUB_OUTPUT
                   else
-                      echo "runner=mbp-13" >> $GITHUB_OUTPUT
+                      echo "runner=mbp-13-ubuntu" >> $GITHUB_OUTPUT
                   fi
 
     setup:
