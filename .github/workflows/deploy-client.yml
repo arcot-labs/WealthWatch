@@ -22,6 +22,7 @@ jobs:
         environment: ${{ github.ref_name == 'main' && 'prod' || github.ref_name }}
         steps:
             - name: unlock keychain
+              if: github.ref_name == 'test'
               run: security unlock-keychain -p ${{ secrets.KEYCHAIN_PASSWORD }} login.keychain
 
             - name: checkout

@@ -19,6 +19,7 @@ jobs:
         environment: ${{ github.ref_name == 'main' && 'prod' || github.ref_name }}
         steps:
             - name: unlock keychain
+              if: github.ref_name == 'test'
               run: security unlock-keychain -p ${{ secrets.KEYCHAIN_PASSWORD }} login.keychain
 
             - name: checkout
@@ -56,7 +57,6 @@ jobs:
                   echo "DEMO_USER=${{ secrets.DEMO_USER }}" >> .env
 
                   echo "DOCKER_REGISTRY=${{ secrets.DOCKER_REGISTRY }}" >> .env
-                  echo "KEYCHAIN_PASSWORD=${{ secrets.KEYCHAIN_PASSWORD }}" >> .env
 
                   echo "LOG_LEVEL=${{ vars.LOG_LEVEL }}" >> .env
 
