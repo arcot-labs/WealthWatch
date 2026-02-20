@@ -12,6 +12,7 @@ export const vars = {
     serverLogtailToken: getEnvVar('SERVER_LOGTAIL_TOKEN'),
     redisHost: getEnvVar('REDIS_HOST'),
     dbHost: getEnvVar('DB_HOST'),
+    dbPort: getEnvVar('DB_PORT'),
     dbName: getEnvVar('DB_NAME'),
     dbUser: getEnvVar('DB_USER'),
     dbPassword: getEnvVar('DB_PASSWORD'),

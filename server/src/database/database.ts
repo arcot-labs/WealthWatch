@@ -8,6 +8,7 @@ export const createPool = async (): Promise<void> => {
     logger.debug('creating database pool')
     const config: pg.PoolConfig = {
         host: vars.dbHost,
+        port: parseInt(vars.dbPort),
         database: vars.dbName,
         user: vars.dbUser,
         password: vars.dbPassword,
