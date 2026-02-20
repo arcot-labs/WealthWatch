@@ -1,6 +1,14 @@
 name: ${REPO?}
 
 services:
+    db-proxy:
+        image: alpine/socat
+        container_name: ${DB_PROXY_CONTAINER?}
+        restart: unless-stopped
+        network_mode: host
+
+        command: TCP-LISTEN:5433,fork,reuseaddr TCP:127.0.0.1:5432
+
     server:
         image: ${SERVER_IMAGE?}
         container_name: ${SERVER_CONTAINER?}
