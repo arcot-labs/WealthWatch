@@ -15,6 +15,13 @@ services:
         restart: unless-stopped
         networks:
             - traefik-stage-public
+        extra_hosts:
+            - host.docker.internal:host-gateway
+
+        depends_on:
+            db-proxy:
+                condition: service_started
+
         labels:
             - traefik.enable=true
             - traefik.prod=false
