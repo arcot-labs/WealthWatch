@@ -4,7 +4,7 @@ services:
     server:
         image: ${SERVER_IMAGE?}
         container_name: ${SERVER_CONTAINER?}
-        restart: always
+        restart: unless-stopped
         networks:
             - traefik-stage-public
         labels:
@@ -26,7 +26,7 @@ services:
     client:
         image: ${CLIENT_IMAGE?}
         container_name: ${CLIENT_CONTAINER?}
-        restart: always
+        restart: unless-stopped
         networks:
             - traefik-stage-public
         labels:
