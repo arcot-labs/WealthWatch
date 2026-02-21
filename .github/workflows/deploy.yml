@@ -52,7 +52,6 @@ jobs:
         environment: ${{ github.ref_name == 'main' && 'prod' || github.ref_name }}
         outputs:
             image_tag: ${{ steps.output-vars.outputs.image_tag }}
-            db_proxy_container: ${{ steps.output-vars.outputs.db_proxy_container }}
             client_image: ${{ steps.output-vars.outputs.client_image }}
             client_container: ${{ steps.output-vars.outputs.client_container }}
             server_image: ${{ steps.output-vars.outputs.server_image }}
@@ -69,14 +68,12 @@ jobs:
             - name: docker container names - non-prod
               if: github.ref_name != 'main'
               run: |
-                  echo "DB_PROXY_CONTAINER=wealthwatch-${{ github.ref_name }}-db-proxy" >> $GITHUB_ENV
                   echo "CLIENT_CONTAINER=wealthwatch-${{ github.ref_name }}-client" >> $GITHUB_ENV
                   echo "SERVER_CONTAINER=wealthwatch-${{ github.ref_name }}-server" >> $GITHUB_ENV
 
             - name: docker container names - prod
               if: github.ref_name == 'main'
               run: |
-                  echo "DB_PROXY_CONTAINER=wealthwatch-prod-db-proxy" >> $GITHUB_ENV
                   echo "CLIENT_CONTAINER=wealthwatch-prod-client" >> $GITHUB_ENV
                   echo "SERVER_CONTAINER=wealthwatch-prod-server" >> $GITHUB_ENV
 
@@ -84,7 +81,6 @@ jobs:
               id: output-vars
               run: |
                   echo "image_tag=$IMAGE_TAG" >> $GITHUB_OUTPUT
-                  echo "db_proxy_container=$DB_PROXY_CONTAINER" >> $GITHUB_OUTPUT
                   echo "client_image=$CLIENT_CONTAINER:$IMAGE_TAG" >> $GITHUB_OUTPUT
                   echo "client_container=$CLIENT_CONTAINER" >> $GITHUB_OUTPUT
                   echo "server_image=$SERVER_CONTAINER:$IMAGE_TAG" >> $GITHUB_OUTPUT
@@ -112,7 +108,6 @@ jobs:
         uses: ./.github/workflows/deploy-infra.yml
         with:
             runner: ${{ needs.runner.outputs.runner }}
-            db_proxy_container: ${{ needs.setup.outputs.db_proxy_container }}
             server_image: ${{ needs.setup.outputs.server_image }}
             server_container: ${{ needs.setup.outputs.server_container}}
             client_image: ${{ needs.setup.outputs.client_image  }}

@@ -7,6 +7,7 @@ export const createRedis = async (): Promise<void> => {
     logger.debug('creating redis client')
     redis = new Redis({
         host: vars.redisHost,
+        port: parseInt(vars.redisPort),
         maxRetriesPerRequest: null,
         retryStrategy: () => null,
     })

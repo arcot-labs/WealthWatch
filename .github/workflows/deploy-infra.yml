@@ -6,9 +6,6 @@ on:
             runner:
                 required: true
                 type: string
-            db_proxy_container:
-                required: true
-                type: string
             server_image:
                 required: true
                 type: string
@@ -48,7 +45,6 @@ jobs:
               if: github.ref_name == 'stage'
               env:
                   REPO: wealthwatch-${{ github.ref_name }}
-                  DB_PROXY_CONTAINER: ${{ inputs.db_proxy_container }}
                   SERVER_IMAGE: ${{ secrets.DOCKER_REGISTRY }}/${{ inputs.server_image }}
                   SERVER_CONTAINER: ${{ inputs.server_container }}
                   CLIENT_IMAGE: ${{ secrets.DOCKER_REGISTRY }}/${{ inputs.client_image }}
@@ -60,7 +56,6 @@ jobs:
               if: github.ref_name == 'main'
               env:
                   REPO: wealthwatch-${{ github.ref_name }}
-                  DB_PROXY_CONTAINER: ${{ inputs.db_proxy_container }}
                   SERVER_IMAGE: ${{ secrets.DOCKER_REGISTRY }}/${{ inputs.server_image }}
                   SERVER_CONTAINER: ${{ inputs.server_container }}
                   CLIENT_IMAGE: ${{ secrets.DOCKER_REGISTRY }}/${{ inputs.client_image }}
