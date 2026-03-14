@@ -9,7 +9,7 @@
             "ignoreDependencies": ["bootstrap", "bootstrap-icons"]
         },
         "server": {
-            "ignore": [".ncurc.js", "src/models/express.ts"],
+            "ignore": [".ncurc.js"],
             "ignoreDependencies": ["@logtail/pino", "pino-pretty"]
         },
         ".": {
