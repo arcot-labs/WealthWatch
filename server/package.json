@@ -18,14 +18,14 @@
         ]
     },
     "dependencies": {
-        "@arcot-labs/wealthwatch-shared": "^6.0.6",
-        "@dotenvx/dotenvx": "^1.57.2",
+        "@arcot-labs/wealthwatch-shared": "^6.0.10",
+        "@dotenvx/dotenvx": "^1.59.1",
         "@logtail/pino": "^0.5.8",
         "@tsconfig/node-lts": "^24.0.0",
         "@tsconfig/strictest": "^2.0.8",
-        "axios": "^1.13.6",
+        "axios": "^1.14.0",
         "bcryptjs": "^3.0.3",
-        "bullmq": "^5.71.0",
+        "bullmq": "^5.71.1",
         "connect-pg-simple": "^10.0.0",
         "cookie-parser": "^1.4.7",
         "cors": "^2.8.6",
@@ -34,7 +34,7 @@
         "express": "^5.2.1",
         "express-session": "^1.19.0",
         "helmet": "^8.1.0",
-        "ioredis": "~5.9.1",
+        "ioredis": "5.10.1",
         "jose": "^6.2.2",
         "js-sha256": "^0.11.1",
         "jwt-decode": "^4.0.0",
@@ -60,14 +60,14 @@
         "@types/pg": "^8.20.0",
         "@types/swagger-jsdoc": "^6.0.4",
         "@types/swagger-ui-express": "^4.1.8",
-        "@vitest/coverage-v8": "^4.1.0",
-        "@vitest/ui": "^4.1.0",
+        "@vitest/coverage-v8": "^4.1.2",
+        "@vitest/ui": "^4.1.2",
         "eslint": "^10.1.0",
         "eslint-config-prettier": "^10.1.8",
         "globals": "^17.4.0",
         "typescript": "^5.9.3",
-        "typescript-eslint": "^8.57.1",
+        "typescript-eslint": "^8.57.2",
         "vite-tsconfig-paths": "^6.1.1",
-        "vitest": "^4.1.0"
+        "vitest": "^4.1.2"
     }
 }
