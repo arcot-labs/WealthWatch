@@ -23,7 +23,7 @@
         "@logtail/pino": "^0.5.8",
         "@tsconfig/node-lts": "^24.0.0",
         "@tsconfig/strictest": "^2.0.8",
-        "axios": "^1.14.0",
+        "axios": "^1.15.0",
         "bcryptjs": "^3.0.3",
         "bullmq": "^5.73.0",
         "connect-pg-simple": "^10.0.0",
