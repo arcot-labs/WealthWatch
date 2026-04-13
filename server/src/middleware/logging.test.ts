@@ -177,12 +177,11 @@ describe('logRequestResponse', () => {
         // eslint-disable-next-line @typescript-eslint/no-unsafe-call
         finishHandler?.()
 
-        // eslint-disable-next-line @typescript-eslint/unbound-method
-        await new Promise(process.nextTick)
-
-        expect(logger.error).toHaveBeenCalledExactlyOnceWith(
-            mockError,
-            'failed to queue log app request'
-        )
+        await vi.waitFor(() => {
+            expect(logger.error).toHaveBeenCalledExactlyOnceWith(
+                mockError,
+                'failed to queue log app request'
+            )
+        })
     })
 })
