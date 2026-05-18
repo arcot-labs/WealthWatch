@@ -30,7 +30,7 @@
         "cookie-parser": "^1.4.7",
         "cors": "^2.8.6",
         "csrf-csrf": "^4.0.3",
-        "date-fns": "^4.2.0",
+        "date-fns": "^4.2.1",
         "express": "^5.2.1",
         "express-session": "^1.19.0",
         "helmet": "^8.1.0",
