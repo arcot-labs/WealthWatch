@@ -8,20 +8,20 @@
         "sourceMap": false,
         "listEmittedFiles": true,
         // to avoid plaid naming conflict
-        "baseUrl": ".",
+        "rootDir": "src",
         "paths": {
-            "@controllers": ["src/controllers/index.ts"],
-            "@database": ["src/database/index.ts"],
-            "@enums": ["src/enums/index.ts"],
-            "@maps": ["src/maps/index.ts"],
-            "@middleware": ["src/middleware/index.ts"],
-            "@models": ["src/models/index.ts"],
-            "@plaid": ["src/plaid/index.ts"],
-            "@queues": ["src/queues/index.ts"],
+            "@controllers": ["./src/controllers/index.ts"],
+            "@database": ["./src/database/index.ts"],
+            "@enums": ["./src/enums/index.ts"],
+            "@maps": ["./src/maps/index.ts"],
+            "@middleware": ["./src/middleware/index.ts"],
+            "@models": ["./src/models/index.ts"],
+            "@plaid": ["./src/plaid/index.ts"],
+            "@queues": ["./src/queues/index.ts"],
             // single default export - router
-            "@routes": ["src/routes/routes.ts"],
-            "@utilities": ["src/utilities/index.ts"],
-            "@wealthwatch-shared": ["src/wealthwatch-shared.ts"]
+            "@routes": ["./src/routes/routes.ts"],
+            "@utilities": ["./src/utilities/index.ts"],
+            "@wealthwatch-shared": ["./src/wealthwatch-shared.ts"]
         }
     },
     "include": ["src"]
